@@ -73,12 +73,12 @@ let g:which_key_map.b = {
       \ }
 let g:which_key_map.t = {
       \ 'name' : '+tab' ,
-      \ '1' : ['1gt'        , 'tab1'],
+      \ '1' :['1gt'        , 'tab1'],
       \ '2' : ['2gt'        , 'tab2'],
       \ '3' : ['3gt'        , 'tab3'],
       \ '4' : ['4gt'        , 'tab4'],
       \ '5' : ['5gt'        , 'tab5'],
-      \ 'm' : ['tabm 0'        , 'move to first'],
+      \ 'm' : [':0tabmove'        , 'move to first'],
       \ 'M' : ['tabm'        , 'move to last'],
       \ 'e' : ['tabe'        , 'new-tabs'],
       \ 't' : ['tabs'        , 'list-tabs'],
