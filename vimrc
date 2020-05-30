@@ -9,10 +9,10 @@ Plug 'easymotion/vim-easymotion'
 Plug 'mattn/emmet-vim'
 Plug 'vim-python/python-syntax'
 Plug 'mbbill/undotree'
+Plug 'tpope/vim-fugitive'
 "Plug 'Lokaltog/vim-powerline'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-fugitive'
 "Plug 'kana/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'liuchengxu/vim-which-key'
@@ -74,7 +74,7 @@ let g:which_key_map.b = {
       \ }
 let g:which_key_map.t = {
       \ 'name' : '+tab' ,
-      \ '1' :['1gt'        , 'tab1'],
+      \ '1' : ['1gt'        , 'tab1'],
       \ '2' : ['2gt'        , 'tab2'],
       \ '3' : ['3gt'        , 'tab3'],
       \ '4' : ['4gt'        , 'tab4'],
@@ -100,6 +100,7 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>diff :windo diffthis<CR>
+nnoremap <leader>diffoff :diffoff!<CR>
 nnoremap <silent><leader>+ :vertical resize +5<CR>
 nnoremap <silent><leader>- :vertical resize -5<CR>
 nnoremap <leader>bn :bn<CR>
