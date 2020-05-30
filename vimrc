@@ -1,3 +1,4 @@
+" Added a line of comment
 " Vim-Plug
 call plug#begin('~/.vim/plugged')
 Plug 'dracula/vim', { 'as': 'dracula' }
