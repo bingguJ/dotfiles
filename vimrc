@@ -12,6 +12,7 @@ Plug 'mbbill/undotree'
 "Plug 'Lokaltog/vim-powerline'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
 "Plug 'kana/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'liuchengxu/vim-which-key'
@@ -98,6 +99,7 @@ nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>diff :windo diffthis<CR>
 nnoremap <silent><leader>+ :vertical resize +5<CR>
 nnoremap <silent><leader>- :vertical resize -5<CR>
 nnoremap <leader>bn :bn<CR>
