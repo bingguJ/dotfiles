@@ -9,6 +9,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'mattn/emmet-vim'
 Plug 'vim-python/python-syntax'
 Plug 'mbbill/undotree'
+Plug 'tpope/vim-fugitive'
 "Plug 'Lokaltog/vim-powerline'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
@@ -78,7 +79,7 @@ let g:which_key_map.t = {
       \ '3' : ['3gt'        , 'tab3'],
       \ '4' : ['4gt'        , 'tab4'],
       \ '5' : ['5gt'        , 'tab5'],
-      \ 'm' : ['tabm 0'        , 'move to first'],
+      \ 'm' : [':0tabmove'        , 'move to first'],
       \ 'M' : ['tabm'        , 'move to last'],
       \ 'e' : ['tabe'        , 'new-tabs'],
       \ 't' : ['tabs'        , 'list-tabs'],
