@@ -1,4 +1,4 @@
-" Another2 line comment
+" Another line comment
 " Vim-Plug
 call plug#begin('~/.vim/plugged')
 Plug 'dracula/vim', { 'as': 'dracula' }
