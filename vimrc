@@ -26,8 +26,9 @@ map <Leader> <Plug>(easymotion-prefix)
 "common setting
 set noerrorbells
 syntax on
-set tabstop=4 softtabstop=4
-set smartindent
+set tabstop=4 
+set shiftwidth=4
+set expandtab
 set number
 set cursorline
 hi CursorLine ctermbg=0
@@ -68,6 +69,7 @@ let g:which_key_map.b = {
       \ 'l' : ['last'     , 'last-buffer']     ,
       \ 'n' : ['bnext'     , 'next-buffer']     ,
       \ 'p' : ['bprevious' , 'previous-buffer'] ,
+      \ 's' : ['<C-^>'     , 'switch-buffer']        ,
       \ 'b' : ['ls' , 'list-buffer'] ,
       \ 'a' : ['enew' , 'add-empty-buffer'] ,
       \ '?' : ['Buffers' , 'fzf-buffer'] ,
