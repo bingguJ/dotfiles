@@ -111,9 +111,9 @@ nnoremap <leader>f :FZF<CR>
 nnoremap <leader>F :FZF 
 
 "Cursor
-"let &t_SI.="\e[5 q" "SI = INSERT mode
-"let &t_SR.="\e[4 q" "SR = REPLACE mode
-"let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
+let &t_SI.="\e[5 q" "SI = INSERT mode
+let &t_SR.="\e[4 q" "SR = REPLACE mode
+let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 
 "Powerline
 "set guifont=PowerlineSymbols\ for\ Powerline
@@ -124,11 +124,11 @@ nnoremap <leader>F :FZF
 "let g:Powerline_symbols = 'fancy'
 
 "Solve the background issue
-"if &term =~ '256color'
-"		    " Disable Background Color Erase (BCE) so that color schemes
-"			"     " work properly when Vim is used inside tmux and GNU screen.
-"			set t_ut=
-"endif
+if &term =~ '256color'
+		    " Disable Background Color Erase (BCE) so that color schemes
+			"     " work properly when Vim is used inside tmux and GNU screen.
+			set t_ut=
+endif
 " airline
 let g:airline_skip_empty_sections = 1
 silent! call airline#extensions#whitespace#disable()
@@ -138,18 +138,18 @@ highlight LineNr Ctermfg=33
 
 "clipboard copy paste
 " copy (write) highlighted text to .vimbuffer
-"vmap <C-y> y:new ~/.vimbuffer<CR>VGp:x<CR> \| :!cat ~/.vimbuffer \| clip.exe <CR><CR>
-"" paste from buffer
-"map <C-h> :r ~/.vimbuffer<CR>
+vmap <C-y> y:new ~/.vimbuffer<CR>VGp:x<CR> \| :!cat ~/.vimbuffer \| clip.exe <CR><CR>
+" paste from buffer
+map <C-h> :r ~/.vimbuffer<CR>
 
 " WSL yank support
-"let s:clip = '/mnt/c/Windows/System32/clip.exe'  " default location
-"if executable(s:clip)
-"    augroup WSLYank
-"        autocmd!
-"        autocmd TextYankPost * call system('echo '.shellescape(join(v:event.regcontents, "\<CR>")).' | '.s:clip)
-"    augroup END
-"end
+let s:clip = '/mnt/c/Windows/System32/clip.exe'  " default location
+if executable(s:clip)
+    augroup WSLYank
+        autocmd!
+        autocmd TextYankPost * call system('echo '.shellescape(join(v:event.regcontents, "\<CR>")).' | '.s:clip)
+    augroup END
+end
 
 "python highlighting
 let g:python_highlight_all = 1
