@@ -53,6 +53,7 @@ let g:which_key_map['w'] = {
       \ 'j' : ['<C-W>j'     , 'window-below']          ,
       \ 'l' : ['<C-W>l'     , 'window-right']          ,
       \ 'k' : ['<C-W>k'     , 'window-up']             ,
+      \ 'r' : ['<C-W>r'     , 'window-rotate']             ,
       \ '+' : ['<C-W>5+'    , 'vertical-resize-up']    ,
       \ '-' : ['<C-W>5-'    , 'vertical-resize-down']   ,
       \ '=' : ['<C-W>='     , 'balance-window']        ,
@@ -153,4 +154,3 @@ end
 
 "python highlighting
 let g:python_highlight_all = 1
-
