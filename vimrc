@@ -34,6 +34,8 @@ set cursorline
 hi CursorLine ctermbg=0
 set encoding=utf-8
 set hidden
+set hlsearch
+set relativenumber
 
 "vim which key config
 let g:mapleader = "\<Space>"
@@ -48,17 +50,20 @@ let g:which_key_map['w'] = {
       \ 'v' : ['<C-W>v'     , 'split-window-below']    ,
       \ 'w' : ['<C-W>w'     , 'other-window']          ,
       \ 'd' : ['<C-W>c'     , 'delete-window']         ,
-      \ '2' : ['<C-W>v'     , 'layout-double-columns'] ,
       \ 'h' : ['<C-W>h'     , 'window-left']           ,
       \ 'j' : ['<C-W>j'     , 'window-below']          ,
       \ 'l' : ['<C-W>l'     , 'window-right']          ,
       \ 'k' : ['<C-W>k'     , 'window-up']             ,
+      \ 'r' : ['<C-W>r'     , 'window-rotate']             ,
       \ '+' : ['<C-W>5+'    , 'vertical-resize-up']    ,
       \ '-' : ['<C-W>5-'    , 'vertical-resize-down']   ,
       \ '=' : ['<C-W>='     , 'balance-window']        ,
       \ 'o' : ['<C-W>o'     , 'only-window']        ,
       \ 'q' : ['<C-W>q'     , 'close_current-window']        ,
       \ '?' : ['Windows'    , 'fzf-window']            ,
+      \ '_' : ['<C-W>_'    , 'zoom-window-vertical']            ,
+      \ '|' : ['<C-W>|'    , 'zoom-window-horizontal']            ,
+      \ 'z' : [':wincmd | | :wincmd _'    , 'zoom-window']            ,
       \ }
 let g:which_key_map.b = {
       \ 'name' : '+buffer' ,
@@ -89,7 +94,8 @@ let g:which_key_map.t = {
       \ 'p' : ['tabp'        , 'previous-tab'],
       \ 'f' : ['tabfirst'        , 'first-tab'],
       \ 'l' : ['tablast'        , 'last-tab'],
-      \ 'c' : ['tabclose'        , 'close-tab'],
+      \ 'q' : ['tabclose'        , 'close-tab'],
+      \ 'c' : [':tabnew %'        , 'close-tab'],
       \ 'o' : ['tabonly'        , 'only-tab'],
       \ }
 
@@ -153,4 +159,3 @@ end
 
 "python highlighting
 let g:python_highlight_all = 1
-
