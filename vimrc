@@ -54,6 +54,7 @@ let g:which_key_map['w'] = {
       \ 'j' : ['<C-W>j'     , 'window-below']          ,
       \ 'l' : ['<C-W>l'     , 'window-right']          ,
       \ 'k' : ['<C-W>k'     , 'window-up']             ,
+      \ 'r' : ['<C-W>r'     , 'window-rotate']             ,
       \ '+' : ['<C-W>5+'    , 'vertical-resize-up']    ,
       \ '-' : ['<C-W>5-'    , 'vertical-resize-down']   ,
       \ '=' : ['<C-W>='     , 'balance-window']        ,
@@ -146,8 +147,8 @@ highlight LineNr Ctermfg=33
 "vmap <C-y> y:new ~/.vimbuffer<CR>VGp:x<CR> \| :!cat ~/.vimbuffer \| clip.exe <CR><CR>
 "" paste from buffer
 "map <C-h> :r ~/.vimbuffer<CR>
-
-" WSL yank support
+"
+"" WSL yank support
 "let s:clip = '/mnt/c/Windows/System32/clip.exe'  " default location
 "if executable(s:clip)
 "    augroup WSLYank
@@ -158,4 +159,3 @@ highlight LineNr Ctermfg=33
 
 "python highlighting
 let g:python_highlight_all = 1
-
