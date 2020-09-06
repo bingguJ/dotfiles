@@ -22,11 +22,15 @@ call plug#end()
 "easymotion
 let g:EasyMotion_do_mapping = 0
 map <Leader> <Plug>(easymotion-prefix)
+map <Leader>s <Plug>(easymotion-bd-f)
 nmap <Leader>s <Plug>(easymotion-overwin-f)
+map <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
-nmap <Leader>n <Plug>(easymotion-bd-n)
-nmap <Leader>j <Plug>(easymotion-j)
-nmap <Leader>k <Plug>(easymotion-k)
+map <Leader>n <Plug>(easymotion-bd-n)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>l <Plug>(easymotion-bd-jk)
+nmap <Leader>l <Plug>(easymotion-overwin-line)
 
 "fzf show detail in the center
 let g:fzf_layout = {'window':{'width':0.8,'height':0.8}}
