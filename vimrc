@@ -138,13 +138,13 @@ let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 "set t_Co=256
 "let g:Powerline_symbols = 'fancy'
 
-"Solve the background issue
-"if &term =~ '256color'
-"		    " Disable Background Color Erase (BCE) so that color schemes
-"			"     " work properly when Vim is used inside tmux and GNU screen.
-"			set t_ut=
-"			set t_u7=
-"endif
+Solve the background issue
+if &term =~ '256color'
+		    " Disable Background Color Erase (BCE) so that color schemes
+			"     " work properly when Vim is used inside tmux and GNU screen.
+			set t_ut=
+			set t_u7=
+endif
 " airline
 let g:airline_skip_empty_sections = 1
 silent! call airline#extensions#whitespace#disable()
