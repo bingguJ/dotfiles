@@ -20,8 +20,17 @@ Plug 'liuchengxu/vim-which-key'
 call plug#end()
 
 "easymotion
+let g:EasyMotion_do_mapping = 0
 map <Leader> <Plug>(easymotion-prefix)
+nmap <Leader>s <Plug>(easymotion-overwin-f)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
+nmap <Leader>n <Plug>(easymotion-bd-n)
+nmap <Leader>j <Plug>(easymotion-j)
+nmap <Leader>k <Plug>(easymotion-k)
 
+"fzf show detail in the center
+let g:fzf_layout = {'window':{'width':0.8,'height':0.8}}
+let $FZF_DEFAULT_OPTS='--reverse'
 
 "common setting
 set noerrorbells
@@ -134,6 +143,7 @@ nnoremap <leader>F :FZF
 "		    " Disable Background Color Erase (BCE) so that color schemes
 "			"     " work properly when Vim is used inside tmux and GNU screen.
 "			set t_ut=
+"			set t_u7=
 "endif
 " airline
 let g:airline_skip_empty_sections = 1
