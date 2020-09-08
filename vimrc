@@ -126,7 +126,7 @@ nnoremap <silent><leader>+ :vertical resize +5<CR>
 nnoremap <silent><leader>- :vertical resize -5<CR>
 nnoremap <leader>bn :bn<CR>
 nnoremap <leader>bp :bp<CR>
-nnoremap <leader>f :FZF<CR>
+nnoremap <leader>f :Files<CR>
 nnoremap <leader>F :FZF 
 
 "Cursor
@@ -173,3 +173,18 @@ highlight LineNr Ctermfg=33
 
 "python highlighting
 let g:python_highlight_all = 1
+
+"python file setting
+au BufNewFile,BufRead *.py set
+    \ tabstop=4
+    \ softtabstop=4
+    \ shiftwidth=4
+    \ textwidth=79
+    \ expandtab
+    \ autoindent
+    \ fileformat=unix
+
+au BufNewFile,BufRead *.json,*.html,*.css set
+    \ tabstop=2
+    \ softtabstop=2
+    \ shiftwidth=2
