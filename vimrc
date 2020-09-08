@@ -173,3 +173,18 @@ end
 
 "python highlighting
 let g:python_highlight_all = 1
+
+"python file setting
+au BufNewFile,BufRead *.py set
+    \ tabstop=4
+    \ softtabstop=4
+    \ shiftwidth=4
+    \ textwidth=79
+    \ expandtab
+    \ autoindent
+    \ fileformat=unix
+
+au BufNewFile,BufRead *.json,*.html,*.css set
+    \ tabstop=2
+    \ softtabstop=2
+    \ shiftwidth=2
