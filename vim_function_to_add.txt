@@ -1,0 +1,2 @@
+<leader>bd to bd!
+add shortcut for git commit with fugitive
