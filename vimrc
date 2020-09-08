@@ -82,7 +82,7 @@ let g:which_key_map.b = {
       \ 'name' : '+buffer' ,
       \ '1' : ['b1'        , 'buffer 1']        ,
       \ '2' : ['b2'        , 'buffer 2']        ,
-      \ 'd' : ['bd'        , 'delete-buffer']   ,
+      \ 'd' : ['bd!'        , 'delete-buffer']   ,
       \ 'f' : ['bfirst'    , 'first-buffer']    ,
       \ 'l' : ['last'     , 'last-buffer']     ,
       \ 'n' : ['bnext'     , 'next-buffer']     ,
