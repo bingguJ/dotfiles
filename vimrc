@@ -16,6 +16,7 @@ Plug 'tpope/vim-surround'
 "Plug 'kana/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'liuchengxu/vim-which-key'
+Plug 'neoclide/coc.nvim',{'branch': 'release'}
 " Plug 'jalvesaq/Nvim-R' 
 call plug#end()
 
@@ -128,6 +129,9 @@ nnoremap <leader>bn :bn<CR>
 nnoremap <leader>bp :bp<CR>
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>F :FZF 
+nnoremap <leader>cs :CocSearch 
+nnoremap <leader>cw :CocSearch <C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>gs :Gstatus<CR>
 
 "Cursor
 let &t_SI.="\e[5 q" "SI = INSERT mode
