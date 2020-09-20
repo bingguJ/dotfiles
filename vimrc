@@ -49,6 +49,7 @@ set encoding=utf-8
 set hidden
 set hlsearch
 set relativenumber
+set backspace=indent,eol,start
 
 "vim which key config
 let g:mapleader = "\<Space>"
