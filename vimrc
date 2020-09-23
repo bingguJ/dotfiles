@@ -14,7 +14,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 "Plug 'kana/vim-surround'
-Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline'
+Plug 'itchyny/lightline.vim'
 Plug 'liuchengxu/vim-which-key'
 " Plug 'jalvesaq/Nvim-R' 
 call plug#end()
@@ -122,13 +123,14 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>diff :windo diffthis<CR>
-nnoremap <leader>diffoff :diffoff!<CR>
+nnoremap <leader>doff :diffoff!<CR>
 nnoremap <silent><leader>+ :vertical resize +5<CR>
 nnoremap <silent><leader>- :vertical resize -5<CR>
 nnoremap <leader>bn :bn<CR>
 nnoremap <leader>bp :bp<CR>
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>F :FZF 
+nnoremap <leader>gs :Gstatus<CR>
 
 "Cursor
 "let &t_SI.="\e[5 q" "SI = INSERT mode
@@ -151,8 +153,14 @@ nnoremap <leader>F :FZF
 "			set t_u7=
 "endif
 " airline
-let g:airline_skip_empty_sections = 1
-silent! call airline#extensions#whitespace#disable()
+"let g:airline_skip_empty_sections = 1
+"silent! call airline#extensions#whitespace#disable()
+
+"lightline
+set laststatus=2
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
 
 colorscheme onedark
 highlight LineNr Ctermfg=33
