@@ -14,7 +14,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 "Plug 'kana/vim-surround'
-Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline'
+Plug 'itchyny/lightline.vim'
 Plug 'liuchengxu/vim-which-key'
 Plug 'neoclide/coc.nvim',{'branch': 'release'}
 " Plug 'jalvesaq/Nvim-R' 
@@ -154,8 +155,14 @@ if &term =~ '256color'
 			set t_u7=
 endif
 " airline
-let g:airline_skip_empty_sections = 1
-silent! call airline#extensions#whitespace#disable()
+"let g:airline_skip_empty_sections = 1
+"silent! call airline#extensions#whitespace#disable()
+
+"lightline
+set laststatus=2
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
 
 colorscheme onedark
 highlight LineNr Ctermfg=33
