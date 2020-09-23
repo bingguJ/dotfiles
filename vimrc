@@ -51,6 +51,7 @@ set encoding=utf-8
 set hidden
 set hlsearch
 set relativenumber
+set backspace=indent,eol,start
 
 "vim which key config
 let g:mapleader = "\<Space>"
@@ -123,7 +124,7 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>diff :windo diffthis<CR>
-nnoremap <leader>diffoff :diffoff!<CR>
+nnoremap <leader>doff :diffoff!<CR>
 nnoremap <silent><leader>+ :vertical resize +5<CR>
 nnoremap <silent><leader>- :vertical resize -5<CR>
 nnoremap <leader>bn :bn<CR>
