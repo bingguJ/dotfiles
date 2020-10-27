@@ -1,13 +1,18 @@
 " Vim-Plug
 call plug#begin('~/.vim/plugged')
+<<<<<<< HEAD
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'markonm/traces.vim'
 Plug 'haishanh/night-owl.vim'
+=======
+"Plug 'dracula/vim', { 'as': 'dracula' }
+"Plug 'haishanh/night-owl.vim'
+>>>>>>> 315764152167bd1f59787cfee60d9f8cebb366eb
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'joshdick/onedark.vim' 
 Plug 'easymotion/vim-easymotion'
-Plug 'mattn/emmet-vim'
+"Plug 'mattn/emmet-vim'
 Plug 'vim-python/python-syntax'
 Plug 'mbbill/undotree'
 Plug 'tpope/vim-fugitive'
@@ -15,13 +20,23 @@ Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 "Plug 'kana/vim-surround'
-Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline'
+Plug 'itchyny/lightline.vim'
 Plug 'liuchengxu/vim-which-key'
+<<<<<<< HEAD
 Plug 'neoclide/coc.nvim',{'branch': 'release'}
 " Plug 'jalvesaq/Nvim-R' 
+=======
+"Plug 'neoclide/coc.nvim',{'branch': 'release'}
+"Plug 'jalvesaq/Nvim-R' 
+"Jupyter notebooks
+"Plug 'goerz/jupytext.vim'
+Plug 'Yggdroot/indentLine'
+>>>>>>> 315764152167bd1f59787cfee60d9f8cebb366eb
 call plug#end()
 
 "easymotion
+let mapleader="\\"
 let g:EasyMotion_do_mapping = 0
 map <Leader> <Plug>(easymotion-prefix)
 map <Leader>s <Plug>(easymotion-bd-f)
@@ -124,7 +139,7 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>diff :windo diffthis<CR>
-nnoremap <leader>diffoff :diffoff!<CR>
+nnoremap <leader>doff :diffoff!<CR>
 nnoremap <silent><leader>+ :vertical resize +5<CR>
 nnoremap <silent><leader>- :vertical resize -5<CR>
 nnoremap <leader>bn :bn<CR>
@@ -156,8 +171,14 @@ nnoremap <leader>gs :Gstatus<CR>
 "			set t_u7=
 "endif
 " airline
-let g:airline_skip_empty_sections = 1
-silent! call airline#extensions#whitespace#disable()
+"let g:airline_skip_empty_sections = 1
+"silent! call airline#extensions#whitespace#disable()
+
+"lightline
+set laststatus=2
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
 
 colorscheme onedark
 highlight LineNr Ctermfg=33
@@ -194,3 +215,8 @@ au BufNewFile,BufRead *.json,*.html,*.css set
     \ tabstop=2
     \ softtabstop=2
     \ shiftwidth=2
+"ipynb file template
+"autocmd BufNewFile *.ipynb silent! 0r ~/.vim/templates/skeleton.ipynb
+
+"indent line
+let g:indentLine_color_term = 48
