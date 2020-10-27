@@ -1,12 +1,12 @@
 " Vim-Plug
 call plug#begin('~/.vim/plugged')
-Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'haishanh/night-owl.vim'
+"Plug 'dracula/vim', { 'as': 'dracula' }
+"Plug 'haishanh/night-owl.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'joshdick/onedark.vim' 
 Plug 'easymotion/vim-easymotion'
-Plug 'mattn/emmet-vim'
+"Plug 'mattn/emmet-vim'
 Plug 'vim-python/python-syntax'
 Plug 'mbbill/undotree'
 Plug 'tpope/vim-fugitive'
@@ -17,10 +17,15 @@ Plug 'tpope/vim-surround'
 "Plug 'vim-airline/vim-airline'
 Plug 'itchyny/lightline.vim'
 Plug 'liuchengxu/vim-which-key'
-" Plug 'jalvesaq/Nvim-R' 
+"Plug 'neoclide/coc.nvim',{'branch': 'release'}
+"Plug 'jalvesaq/Nvim-R' 
+"Jupyter notebooks
+"Plug 'goerz/jupytext.vim'
+Plug 'Yggdroot/indentLine'
 call plug#end()
 
 "easymotion
+let mapleader="\\"
 let g:EasyMotion_do_mapping = 0
 map <Leader> <Plug>(easymotion-prefix)
 map <Leader>s <Plug>(easymotion-bd-f)
@@ -130,6 +135,8 @@ nnoremap <leader>bn :bn<CR>
 nnoremap <leader>bp :bp<CR>
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>F :FZF 
+nnoremap <leader>cs :CocSearch 
+nnoremap <leader>cw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 nnoremap <leader>gs :Gstatus<CR>
 
 "Cursor
@@ -197,3 +204,8 @@ au BufNewFile,BufRead *.json,*.html,*.css set
     \ tabstop=2
     \ softtabstop=2
     \ shiftwidth=2
+"ipynb file template
+"autocmd BufNewFile *.ipynb silent! 0r ~/.vim/templates/skeleton.ipynb
+
+"indent line
+let g:indentLine_color_term = 48
