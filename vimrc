@@ -1,8 +1,6 @@
 " Vim-Plug
 call plug#begin('~/.vim/plugged')
-Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'markonm/traces.vim'
-Plug 'haishanh/night-owl.vim'
 "Plug 'dracula/vim', { 'as': 'dracula' }
 "Plug 'haishanh/night-owl.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -20,8 +18,6 @@ Plug 'tpope/vim-surround'
 "Plug 'vim-airline/vim-airline'
 Plug 'itchyny/lightline.vim'
 Plug 'liuchengxu/vim-which-key'
-Plug 'neoclide/coc.nvim',{'branch': 'release'}
-" Plug 'jalvesaq/Nvim-R' 
 "Plug 'neoclide/coc.nvim',{'branch': 'release'}
 "Plug 'jalvesaq/Nvim-R' 
 "Jupyter notebooks
