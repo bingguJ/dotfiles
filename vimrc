@@ -1,5 +1,6 @@
 " Vim-Plug
 call plug#begin('~/.vim/plugged')
+Plug 'markonm/traces.vim'
 "Plug 'dracula/vim', { 'as': 'dracula' }
 "Plug 'haishanh/night-owl.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
