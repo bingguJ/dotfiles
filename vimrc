@@ -21,7 +21,7 @@ Plug 'liuchengxu/vim-which-key'
 "Plug 'neoclide/coc.nvim',{'branch': 'release'}
 "Plug 'jalvesaq/Nvim-R' 
 "Jupyter notebooks
-"Plug 'goerz/jupytext.vim'
+Plug 'goerz/jupytext.vim'
 Plug 'Yggdroot/indentLine'
 call plug#end()
 
@@ -184,7 +184,8 @@ let s:clip = '/mnt/c/Windows/System32/clip.exe'  " default location
 if executable(s:clip)
     augroup WSLYank
         autocmd!
-        autocmd TextYankPost * call system('echo '.shellescape(join(v:event.regcontents, "\<CR>")).' | '.s:clip)
+        "autocmd TextYankPost * call system('echo '.shellescape(join(v:event.regcontents, "\<CR>")).' | '.s:clip)
+         autocmd TextYankPost * if v:event.operator ==# 'y' && v:event.regname ==# '' | call system(s:clip, @0) | endif
     augroup END
 end
 
