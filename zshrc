@@ -8,7 +8,7 @@ export ZSH="/home/eternal/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="half-life"
+ZSH_THEME="crunch"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -101,8 +101,9 @@ source $ZSH/oh-my-zsh.sh
 # zsh vi mode
 bindkey -v
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='rg . --files --hidden -uu'
-export FZF_ALT_C_COMMAND="find . -type d -not -iwholename '*.git*'"
+#export FZF_DEFAULT_COMMAND="rg \$dir --files --hidden -uu -g '!.git'"
+export FZF_CTRL_T_COMMAND="rg \$dir --files --hidden -uu -g '!.git'"
+export FZF_ALT_C_COMMAND="find \$dir -type d -not -iwholename '*.git*'"
 
 # dircolors alias
 eval "`dircolors -b ~/.dircolors`"
