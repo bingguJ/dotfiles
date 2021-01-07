@@ -11,6 +11,7 @@ echo "Yi's linux development environment setup"
 #sudo apt-get update
 #sudo apt-get install fish
 #sudo chsh -s 'which fish'
+#ln -s /home/eternity/dotfiles/fish_prompt.fish /home/eternity/.config/fish/functions/fish_prompt.fish
 
 # vim setup
 
@@ -19,11 +20,16 @@ sudo add-apt-repository ppa:jonathonf/vim
 sudo apt update
 sudo apt install vim
 
+# nodejs 14 install
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
 # fzf install
 
 # rg install
 sudo add-apt-repository ppa:x4121/ripgrep
 sudo apt-get update
+sudo apt install ripgrep
 
 # vim plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -33,8 +39,19 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 # setup soft links
 ln -sf ~/dotfiles/vimrc ~/.vimrc
-ln -sf ~/dotfiles/dircolors ~/.dircolors
-ln -sf ~/dotfiles/onedark.vim ~/.vim/plugged/onedark.vim/autoload/onedark.vim
+#ln -sf ~/dotfiles/onedark.vim ~/.vim/plugged/onedark.vim/autoload/onedark.vim
 
-#ln -s /home/eternity/dotfiles/fish_prompt.fish /home/eternity/.config/fish/functions/fish_prompt.fish
+# dircolors
+ln -sf ~/dotfiles/dircolors ~/.dircolors
+# add following two lines into ~/.bashrc or ~/.zshrc
+# dircolors alias
+# eval "`dircolors -b ~/.dircolors`"
+# alias ls='ls --color=auto'
+
+# zshell setup
+sudo apt install zsh
+# oh my zshell install
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# good themes are af-magic, crunch and half-life
+# change them in .zshrc
 

@@ -86,6 +86,12 @@ let g:which_key_map['w'] = {
       \ '|' : ['<C-W>|'    , 'zoom-window-horizontal']            ,
       \ 'z' : [':wincmd | | :wincmd _'    , 'zoom-window']            ,
       \ }
+"let g:which_key_map['e'] = {
+"      \ 'name' : '+execute' ,
+"      \ 'e' : ['0y$:!<c-r>"'    , 'exec-current-line']            ,
+"      \ 'r' : ['0y$:r!<c-r>"'    , 'exec-and-paste-outcome']            ,
+"      \ 't' : ['<c-r>\" '    , 'test']            ,
+"      \ }
 let g:which_key_map.b = {
       \ 'name' : '+buffer' ,
       \ '1' : ['b1'        , 'buffer 1']        ,
@@ -135,10 +141,27 @@ nnoremap <silent><leader>- :vertical resize -5<CR>
 nnoremap <leader>bn :bn<CR>
 nnoremap <leader>bp :bp<CR>
 nnoremap <leader>f :Files<CR>
-nnoremap <leader>F :FZF 
+nnoremap <leader>F :Files 
+nnoremap <leader>ee 0y$:!<c-r>"<CR>
+nnoremap <leader>er 0y$:r!<c-r>"<CR>
 nnoremap <leader>cs :CocSearch 
 nnoremap <leader>cw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>== gg=G<c-o><c-o>
+nnoremap <leader>sc /<c-r>=expand("<cword>")<CR><CR>
+nnoremap <leader>sr :%s/<c-r>=expand("<cword>")<CR>/
+vnoremap <leader>sv y:%s/<c-r>"/
+let g:which_key_map['e'] = {
+      \ 'name' : '+execute' ,
+      \ 'e' :  'exec-current-line',
+      \ 'r' :  'exec-and-paste-outcome',
+      \ }
+let g:which_key_map['s'] = {
+      \ 'name' : '+execute' ,
+      \ 'c' :  'gsearch_cur_word',
+      \ 'r' :  'greplace_cur_word',
+      \ 'v' :  'greplace_hilight_word',
+      \ }
 
 "Cursor
 let &t_SI.="\e[5 q" "SI = INSERT mode
