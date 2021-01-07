@@ -11,7 +11,8 @@ echo "Yi's linux development environment setup"
 #sudo apt-get update
 #sudo apt-get install fish
 #sudo chsh -s 'which fish'
-#ln -s /home/eternity/dotfiles/fish_prompt.fish /home/eternity/.config/fish/functions/fish_prompt.fish
+#ln -sf ~/dotfiles/fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish
+#ln -sf ~/dotfiles/config.fish ~/.config/fish/config.fish
 
 # vim setup
 

@@ -17,8 +17,9 @@ set Download /mnt/c/Users/bingu/Downloads
 set Class /mnt/c/zy/classes/columbia
 
 # fzf hotkey
-set -U FZF_CTRL_T_COMMAND "rg \$dir --files --hidden -uu"
-set -U FZF_ALT_C_COMMAND "find \$dir -type d"
+#set -U FZF_CTRL_T_COMMAND "rg \$dir --files --hidden -uu"
+set -U FZF_CTRL_T_COMMAND "rg \$dir --files --hidden -uu -g '!.git'"
+set -U FZF_ALT_C_COMMAND "find \$dir -type d -not -iwholename '*.git*'"
 #set -U FZF_ALT_C_COMMAND "rg \$dir --sort-files --files --hidden -uu --null 2> /dev/null | xargs -0 dirname | uniq"
 #set -U FZF_CTRL_T_COMMAND ""
 #set -U FZF_ALT_C_COMMAND ""
