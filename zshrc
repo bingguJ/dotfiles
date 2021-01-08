@@ -101,9 +101,17 @@ source $ZSH/oh-my-zsh.sh
 # zsh vi mode
 bindkey -v
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# FZF configure search with rg fastest but sometimes permission denied
+# fd is half the speed of rg but ten times faster than default find
+# Default needed for :Files inside the vim
 #export FZF_DEFAULT_COMMAND="rg \$dir --files --hidden -uu -g '!.git'"
-export FZF_CTRL_T_COMMAND="rg \$dir --files --hidden -uu -g '!.git'"
-export FZF_ALT_C_COMMAND="find \$dir -type d -not -iwholename '*.git*'"
+#export FZF_CTRL_T_COMMAND="rg \$dir --files --hidden -uu -g '!.git'"
+#export FZF_ALT_C_COMMAND="find \$dir -type d -not -iwholename '*.git*'"
+#export FZF_CTRL_T_COMMAND="fd --type f --follow --hidden --exclude .git"
+export FZF_DEFAULT_COMMAND="fd \$dir --type f --follow --hidden --exclude .git"
+export FZF_CTRL_T_COMMAND="fd \$dir --type f --follow --hidden --exclude .git"
+export FZF_ALT_C_COMMAND="fd \$dir --type d --follow --hidden --exclude .git"
 
 # dircolors alias
 eval "`dircolors -b ~/.dircolors`"

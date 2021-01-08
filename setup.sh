@@ -26,6 +26,7 @@ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
 # fzf install
+# fd install
 
 # rg install
 sudo add-apt-repository ppa:x4121/ripgrep
