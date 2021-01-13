@@ -39,6 +39,11 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 # Open vim and PlugInstall
 
+# undotree undodir setup
+mkdir ~/.vim/undodir
+# this line already in vimrc
+#set undodir=~/.vim/undodir
+
 # setup soft links
 ln -sf ~/dotfiles/vimrc ~/.vimrc
 #ln -sf ~/dotfiles/onedark.vim ~/.vim/plugged/onedark.vim/autoload/onedark.vim

@@ -57,7 +57,10 @@ set hidden
 set hlsearch
 set relativenumber
 set autoindent
+filetype plugin indent on
 set backspace=indent,eol,start
+set undodir=~/.vim/undodir
+set undofile
 
 "vim which key config
 let g:mapleader = "\<Space>"
