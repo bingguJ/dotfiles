@@ -23,6 +23,7 @@ Plug 'liuchengxu/vim-which-key'
 "Jupyter notebooks
 "Plug 'goerz/jupytext.vim'
 Plug 'Yggdroot/indentLine'
+Plug 'stefandtw/quickfix-reflector.vim'
 call plug#end()
 
 "easymotion
