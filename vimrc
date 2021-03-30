@@ -26,7 +26,8 @@ Plug 'liuchengxu/vista.vim'
 "Plug 'goerz/jupytext.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'stefandtw/quickfix-reflector.vim'
-Plug 'kien/rainbow_parentheses.vim'
+"Plug 'kien/rainbow_parentheses.vim'
+Plug 'luochen1990/rainbow'
 call plug#end()
 
 "easymotion
@@ -172,23 +173,24 @@ let g:which_key_map['s'] = {
       \ }
 
 "Rainbow Parenthesis
-let g:rbpt_colorpairs = [
-      \ ['brown',       'RoyalBlue3'],
-      \ ['gray',        'RoyalBlue3'],
-      \ ['Darkblue',    'SeaGreen3'],
-      \ ['darkgreen',   'firebrick3'],
-      \ ['darkcyan',    'RoyalBlue3'],
-      \ ['darkred',     'SeaGreen3'],
-      \ ['gray',        'RoyalBlue3'],
-      \ ]
+let g:rainbow_active = 1
+" let g:rbpt_colorpairs = [
+"       \ ['brown',       'RoyalBlue3'],
+"       \ ['gray',        'RoyalBlue3'],
+"       \ ['Darkblue',    'SeaGreen3'],
+"       \ ['darkgreen',   'firebrick3'],
+"       \ ['darkcyan',    'RoyalBlue3'],
+"       \ ['darkred',     'SeaGreen3'],
+"       \ ['gray',        'RoyalBlue3'],
+"       \ ]
 
-let g:rbpt_max = 16
-let g:rbpt_loadcmd_toggle = 0
+" let g:rbpt_max = 16
+" let g:rbpt_loadcmd_toggle = 0
 
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+" au VimEnter * RainbowParenthesesToggle
+" au Syntax * RainbowParenthesesLoadRound
+" au Syntax * RainbowParenthesesLoadSquare
+" au Syntax * RainbowParenthesesLoadBraces
 
 "Cursor
 "let &t_SI.="\e[5 q" "SI = INSERT mode
