@@ -14,16 +14,19 @@ Plug 'tpope/vim-fugitive'
 "Plug 'Lokaltog/vim-powerline'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 "Plug 'kana/vim-surround'
 "Plug 'vim-airline/vim-airline'
 Plug 'itchyny/lightline.vim'
 Plug 'liuchengxu/vim-which-key'
+Plug 'liuchengxu/vista.vim'
 "Plug 'neoclide/coc.nvim',{'branch': 'release'}
 "Plug 'jalvesaq/Nvim-R' 
 "Jupyter notebooks
 "Plug 'goerz/jupytext.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'stefandtw/quickfix-reflector.vim'
+Plug 'kien/rainbow_parentheses.vim'
 call plug#end()
 
 "easymotion
@@ -167,6 +170,25 @@ let g:which_key_map['s'] = {
       \ 'r' :  'greplace_cur_word',
       \ 'v' :  'greplace_hilight_word',
       \ }
+
+"Rainbow Parenthesis
+let g:rbpt_colorpairs = [
+      \ ['brown',       'RoyalBlue3'],
+      \ ['gray',        'RoyalBlue3'],
+      \ ['Darkblue',    'SeaGreen3'],
+      \ ['darkgreen',   'firebrick3'],
+      \ ['darkcyan',    'RoyalBlue3'],
+      \ ['darkred',     'SeaGreen3'],
+      \ ['gray',        'RoyalBlue3'],
+      \ ]
+
+let g:rbpt_max = 16
+let g:rbpt_loadcmd_toggle = 0
+
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 
 "Cursor
 "let &t_SI.="\e[5 q" "SI = INSERT mode
