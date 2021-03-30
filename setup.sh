@@ -62,3 +62,13 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 # good themes are af-magic, crunch and half-life
 # change them in .zshrc
 
+# ctag install
+git clone https://github.com/universal-ctags/ctags.git
+mv ctags ~
+# cd ~/ctags
+~/ctags/autogen.sh
+# defaults to /usr/local
+~/ctags/configure --prefix=/usr/local 
+make
+# may require extra privileges depending on where to install
+make install 
