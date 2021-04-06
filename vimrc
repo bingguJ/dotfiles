@@ -62,6 +62,7 @@ set hidden
 set hlsearch
 set relativenumber
 set autoindent
+set autoread
 filetype plugin indent on
 set backspace=indent,eol,start
 set undodir=~/.vim/undodir
