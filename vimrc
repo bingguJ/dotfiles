@@ -22,6 +22,8 @@ Plug 'itchyny/lightline.vim'
 Plug 'liuchengxu/vim-which-key'
 Plug 'liuchengxu/vista.vim'
 Plug 'neoclide/coc.nvim',{'branch': 'release'}
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 "Plug 'jalvesaq/Nvim-R' 
 "Jupyter notebooks
 Plug 'goerz/jupytext.vim'
@@ -229,20 +231,20 @@ highlight LineNr Ctermfg=33
 
 "clipboard copy paste
 " copy (write) highlighted text to .vimbuffer
-vmap <C-y> y:new ~/.vimbuffer<CR>VGp:x<CR> \| :!cat ~/.vimbuffer \| clip.exe <CR><CR>
+" vmap <C-y> y:new ~/.vimbuffer<CR>VGp:x<CR> \| :!cat ~/.vimbuffer \| clip.exe <CR><CR>
 " paste from buffer
-map <C-h> :r ~/.vimbuffer<CR>
+" map <C-h> :r ~/.vimbuffer<CR>
 
 " WSL yank support
 let s:clip = '/mnt/c/Windows/System32/clip.exe'  " default location
 nnoremap "*Y :call system('/mnt/c/Windows/System32/clip.exe', @0)<CR>
-if executable(s:clip)
-    augroup WSLYank
-        autocmd!
-        "autocmd TextYankPost * call system('echo '.shellescape(join(v:event.regcontents, "\<CR>")).' | '.s:clip)
-        "autocmd TextYankPost * if v:event.operator ==# 'y' && v:event.regname ==# ''| call system(s:clip, @0) | endif
-    augroup END
-end
+"if executable(s:clip)
+"    augroup WSLYank
+"        autocmd!
+"        autocmd TextYankPost * call system('echo '.shellescape(join(v:event.regcontents, "\<CR>")).' | '.s:clip)
+"        autocmd TextYankPost * if v:event.operator ==# 'y' && v:event.regname ==# ''| call system(s:clip, @0) | endif
+"    augroup END
+"end
 
 "python highlighting
 let g:python_highlight_all = 1
@@ -266,3 +268,9 @@ au BufNewFile,BufRead *.json,*.html,*.css set
 
 "indent line
 let g:indentLine_color_term = 48
+
+"ultiSnips
+let g:UltiSnipsExpandTrigger="<Tab>"
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/plugged/vim-snippets/UltiSnips']
+let g:UltiSnipsJumpForwardTrigger="<c-l>"
+let g:UltiSnipsJumpBackwardTrigger="<c-h>"
