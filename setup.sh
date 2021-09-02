@@ -62,6 +62,11 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 # good themes are af-magic, crunch and half-life
 # change them in .zshrc
 
+# snippet link
+mkdir ~/dotfiles/snippet
+ln -sf ~/.vim/plugged/vim-snippets/UltiSnips/all.snippets ~/dotfiles/snippet/all.snippets
+ln -sf ~/.vim/plugged/vim-snippets/UltiSnips/matlab.snippets ~/dotfiles/snippet/matlab.snippets
+
 # ctag install
 git clone https://github.com/universal-ctags/ctags.git
 mv ctags ~

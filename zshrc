@@ -117,3 +117,6 @@ export FZF_ALT_C_COMMAND="fd \$dir --type d --follow --hidden --exclude .git"
 eval "`dircolors -b ~/.dircolors`"
 alias ls='ls --color=auto'
 
+# python alias
+alias python='python3'
+
