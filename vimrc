@@ -22,8 +22,8 @@ Plug 'itchyny/lightline.vim'
 Plug 'liuchengxu/vim-which-key'
 Plug 'liuchengxu/vista.vim'
 Plug 'neoclide/coc.nvim',{'branch': 'release'}
-"Plug 'SirVer/ultisnips'
-"Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 "Plug 'jalvesaq/Nvim-R' 
 "Jupyter notebooks
 "Plug 'goerz/jupytext.vim'
@@ -174,7 +174,7 @@ let g:which_key_map['s'] = {
       \ 'c' :  'gsearch_cur_word',
       \ 'r' :  'greplace_cur_word',
       \ 'v' :  'greplace_hilight_word',
-      \ 's' :['UltiSnips#ListSnippets()',  'greplace_hilight_word'],
+      \ 's' :['UltiSnips#ListSnippets()',  'snippet suggestion'],
       \ }
 
 "Rainbow Parenthesis
