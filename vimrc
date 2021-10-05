@@ -174,7 +174,7 @@ let g:which_key_map['s'] = {
       \ 'c' :  'gsearch_cur_word',
       \ 'r' :  'greplace_cur_word',
       \ 'v' :  'greplace_hilight_word',
-      \ 's' :['UltiSnips#ListSnippets()',  'greplace_hilight_word'],
+      \ 's' :['UltiSnips#ListSnippets()',  'snippet suggestion'],
       \ }
 
 "Rainbow Parenthesis
