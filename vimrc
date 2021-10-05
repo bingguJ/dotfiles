@@ -22,8 +22,8 @@ Plug 'itchyny/lightline.vim'
 Plug 'liuchengxu/vim-which-key'
 Plug 'liuchengxu/vista.vim'
 Plug 'neoclide/coc.nvim',{'branch': 'release'}
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+"Plug 'SirVer/ultisnips'
+"Plug 'honza/vim-snippets'
 "Plug 'jalvesaq/Nvim-R' 
 "Jupyter notebooks
 "Plug 'goerz/jupytext.vim'
