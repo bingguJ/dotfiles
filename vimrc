@@ -242,8 +242,8 @@ highlight LineNr Ctermfg=33
 "if executable(s:clip)
 "    augroup WSLYank
 "        autocmd!
-"        "autocmd TextYankPost * call system('echo '.shellescape(join(v:event.regcontents, "\<CR>")).' | '.s:clip)
-"        "autocmd TextYankPost * if v:event.operator ==# 'y' && v:event.regname ==# ''| call system(s:clip, @0) | endif
+"        autocmd TextYankPost * call system('echo '.shellescape(join(v:event.regcontents, "\<CR>")).' | '.s:clip)
+"        autocmd TextYankPost * if v:event.operator ==# 'y' && v:event.regname ==# ''| call system(s:clip, @0) | endif
 "    augroup END
 "end
 
