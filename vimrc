@@ -230,15 +230,15 @@ let g:lightline = {
 colorscheme onedark
 highlight LineNr Ctermfg=33
 
-""clipboard copy paste
-"" copy (write) highlighted text to .vimbuffer
-"vmap <C-y> y:new ~/.vimbuffer<CR>VGp:x<CR> \| :!cat ~/.vimbuffer \| clip.exe <CR><CR>
-"" paste from buffer
-"map <C-h> :r ~/.vimbuffer<CR>
-"
-"" WSL yank support
-"let s:clip = '/mnt/c/Windows/System32/clip.exe'  " default location
-"nnoremap "*Y :call system('/mnt/c/Windows/System32/clip.exe', @0)<CR>
+"clipboard copy paste
+" copy (write) highlighted text to .vimbuffer
+" vmap <C-y> y:new ~/.vimbuffer<CR>VGp:x<CR> \| :!cat ~/.vimbuffer \| clip.exe <CR><CR>
+" paste from buffer
+" map <C-h> :r ~/.vimbuffer<CR>
+
+" WSL yank support
+" let s:clip = '/mnt/c/Windows/System32/clip.exe'  " default location
+" nnoremap "*Y :call system('/mnt/c/Windows/System32/clip.exe', @0)<CR>
 "if executable(s:clip)
 "    augroup WSLYank
 "        autocmd!
