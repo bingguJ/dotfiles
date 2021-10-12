@@ -65,7 +65,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 # snippet link
 mkdir ~/dotfiles/snippet
 ln -sf ~/dotfiles/snippet/all.snippets ~/.vim/plugged/vim-snippets/UltiSnips/all.snippets 
-ln -sf ~/dotfiles/snippet/matlab.snippets ~/.vim/plugged/vim-snippets/UltiSnips/matlab.snippets 
+ln -sf ~/dotfiles/snippet/matlab.snippets ~/.vim/plugged/vim-snippets/snippets/matlab.snippets 
 
 # ctag install
 git clone https://github.com/universal-ctags/ctags.git
