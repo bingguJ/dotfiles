@@ -22,3 +22,9 @@ snip.rv = snip.basename or "class_name"`}
 	end
 end
 endsnippet
+
+snippet fun function
+	function [${1:out}] = ${2:`vim_snippets#Filename("$1", "fun_name")`}(${3}) 
+	${0}
+	end
+endsnippet
